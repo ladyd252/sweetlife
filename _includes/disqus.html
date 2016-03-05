@@ -1,21 +1,20 @@
 <div id="disqus_thread"></div>
 <script>
-    /**
-     * CONFIGURATION VARIABLES
-     */
 
-     var disqus_shortname = 'sweetlifeofdana';
-    //  var disqus_developer = 1; // Comment out when the site is live
-     var disqus_url = '{{ page.url }}';
+var disqus_config = function () {
+this.page.url = {{ page.url }}; 
+this.page.identifier = {{ page.url }}; 
+};
 
-    (function() {
-        var d = document, s = d.createElement('script');
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
 
-        s.src = '//sweetlifeofdana.disqus.com/embed.js';
+s.src = '//sweetlifeofdana.disqus.com/embed.js';
 
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-</div>
+
+
